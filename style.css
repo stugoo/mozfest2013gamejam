@@ -58,6 +58,7 @@ body {
   left: 250px;
   position: absolute;
   background: red;
+  z-index: 99999;
 }
 
 .cop-car {
@@ -66,5 +67,18 @@ body {
   bottom: 40px;
   right: -120px;
   position: absolute;
+
   background: blue;
+  z-index: 1000;
+}
+
+.cop-car .slow-zone {
+  position: absolute;
+  width: 500px;
+  top: -20px;
+  height: 80px;
+  opacity: .5;
+  left: -200px;
+  background: #7caee6;
+  z-index: 500;
 }

@@ -12,6 +12,10 @@ $(document).ready(function(){
   
 });
 
+function gameOverMan(){
+  $(".game-over").show();
+}
+
 function step(){
 
   var copcar = $(".cop-car");
@@ -26,9 +30,15 @@ function step(){
 
     copcar.css("right",copPos);
   
-    if(copPos > 1400 ){
-      copPos = -120;
+    if(copPos > 2000 ){
+      copPos = -500;
       copcar.remove();
+    }
+  }
+
+  if(copPos > 300 && copPos < 900) {
+    if(!$(".world").hasClass("slow")){
+      gameOverMan();
     }
   }
 

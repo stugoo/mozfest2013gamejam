@@ -41,9 +41,8 @@ function policeCar(){
     return {
         add: function(){
           console.log('add');
-          var copcar = $("<div class='cop-car'></div>");
-          this.el.className = 'cop-car';
-          $(".world").append(this.el);
+          var copcar = $("<div class='cop-car'><div class='slow-zone'></div></div>");
+          $(".world").append(copcar);
           setTimeout(this.remove, secondsToMillis(4));
           carOnScreen = true;
         },
@@ -63,15 +62,6 @@ function tick(){
         car.add();
     }
 
-  if (carOnScreen === true){
-    if (groaning === true){
-      // Success
-      console.log('groaning');
-    } else {
-      // Failure
-      console.log('should be groaning');
-    }
-  }
 }
 
 // First tick
