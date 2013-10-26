@@ -4,7 +4,7 @@ $(document).ready(function(){
   
   slowSpeed = 5;
   fastSpeed = 10;
-  copPos = 0;
+  copPos = -600;
   speed = "fast";
 
   window.webkitRequestAnimationFrame(step);  
@@ -21,26 +21,40 @@ function step(){
   var copcar = $(".cop-car");
 
   if(copcar.length > 0) {
-
+    var speed;
     if($(".world").hasClass("slow")) {
-      copPos = copPos + slowSpeed;
+      speed = slowSpeed;
     } else {
-      copPos = copPos + fastSpeed;
+      speed = fastSpeed;
     }
 
-    copcar.css("right",copPos);
-  
-    if(copPos > 2000 ){
-      copPos = -500;
-      copcar.remove();
-    }
+    $(".cop-car").each(function(){
+
+      var pos = parseInt($(this).css("right"));
+      $(this).css("right",pos + speed);
+       
+       
+       if(pos > 300 && pos < 900) {
+
+         if(!$(".world").hasClass("slow")){
+           gameOverMan();
+         }
+       }
+
+
+
+       if(pos > 2000 ){
+         $(this).remove();
+       }
+
+    });
+
+
+    
+    
+    
   }
 
-  if(copPos > 300 && copPos < 900) {
-    if(!$(".world").hasClass("slow")){
-      gameOverMan();
-    }
-  }
 
   window.webkitRequestAnimationFrame(step);  
   

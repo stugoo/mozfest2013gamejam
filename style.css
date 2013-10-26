@@ -39,7 +39,7 @@ body {
   position: absolute;
   width: 100%;
   top: 360px;
-  
+
 }
 
 .lane {
@@ -50,7 +50,7 @@ body {
   width: 100%;
   background: url(lane.png) repeat-x;
 }
-  
+
 .car {
   width: 120px;
   height: 80px;
@@ -58,7 +58,8 @@ body {
   left: 250px;
   position: absolute;
   background: red;
-  z-index: 99999;
+  background: top left url(assets/images/bus.png) no-repeat;
+  background-size: 100%;
 }
 
 .cop-car {
@@ -69,6 +70,8 @@ body {
   position: absolute;
 
   background: blue;
+  background: top left url(assets/images/bus.png) no-repeat;
+  background-size: 100%;
   z-index: 1000;
 }
 
@@ -82,3 +85,24 @@ body {
   background: #7caee6;
   z-index: 500;
 }
+
+.game-over{
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  background-color: #f00;
+  opacity: 0.6;
+
+  z-index: 100;
+
+  text-align: center;
+  line-height: 500px;
+
+  font-size: 80px;
+
+  font-family: Arial;
+
+  color: #f00;
+}
+

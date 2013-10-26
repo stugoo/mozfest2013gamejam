@@ -1,4 +1,4 @@
-var carTimes = [2000, 8000],                             // Seconds at which the cars appear
+var carTimes = [1000, 5000, 9000, 13000],                 // Seconds at which the cars appear
     timeElapsed = 0,                                     // Total time
     groaning = false,                                    // Is the user groaning
     carOnScreen = false,                                 // Is there a car on screen
@@ -46,13 +46,7 @@ function policeCar(){
           console.log('add');
           var copcar = $("<div class='cop-car'><div class='slow-zone'></div></div>");
           $(".world").append(copcar);
-          setTimeout(this.remove, secondsToMillis(4));
-          carOnScreen = true;
         },
-
-        remove: function(){
-          carOnScreen = false;
-        }
     }
 };
 
