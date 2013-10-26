@@ -1,4 +1,4 @@
-var carTimes = [1000, 5000, 9000, 13000],                 // Seconds at which the cars appear
+var carTimes = [1000, 2500, 5000, 9000, 13000, 14000, 18000, 21000, 22000, 25000],                 // Seconds at which the cars appear
     timeElapsed = 0,                                     // Total time
     groaning = false,                                    // Is the user groaning
     carOnScreen = false,                                 // Is there a car on screen
@@ -39,12 +39,12 @@ function secondsToMillis(millis){
 // Police car object
 function policeCar(){
     var el = false,
-        animationTime = secondsToMillis(1);
+    animationTime = secondsToMillis(1);
 
     return {
         add: function(){
           console.log('add');
-          var copcar = $("<div class='cop-car'><div class='slow-zone'></div></div>");
+          var copcar = $("<div class='cop-car'><div class='slow-zone'></div><div class='sprite'></div></div>");
           $(".world").append(copcar);
         },
     }
