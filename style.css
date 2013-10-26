@@ -18,19 +18,37 @@ body {
 }
 
 .sky {
-  height: 200px;
+  height: 335px;
   background: #8dcfea;
   position: absolute;
   top: 0px;
   width: 100%;
+
+  background: url(assets/images/sky-tile.jpg) 0 0 repeat-x;
 }
 
 .buildings {
   width: 100%;
   height: 180px;
-  background: #BBB;
+  /*background: #BBB;*/
   position: absolute;
   top: 150px;
+}
+
+.houses {
+  width: 100%;
+  height: 360px;
+  background: url(assets/images/house.png) 0 100% repeat-x;
+  position: absolute;
+  top: 0;
+}
+
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background: url(assets/images/backdrop.png) 0 27px repeat-x;
+  position: absolute;
+  bottom: 0;
 }
 
 .road {
