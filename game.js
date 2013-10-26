@@ -7,10 +7,7 @@ $(document).ready(function(){
   copPos = -600;
   speed = "fast";
   copCount = 0;
-
   window.webkitRequestAnimationFrame(step);
-
-
 });
 
 function gameOverMan(){
@@ -19,7 +16,6 @@ function gameOverMan(){
 }
 
 function step(){
-
 
   var copcar = $(".cop-car");
 
