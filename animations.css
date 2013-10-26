@@ -33,6 +33,18 @@
   100% { background-position:-30px 0px;}
 }
 
+.buildings {
+  -webkit-animation-name: buildings;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+}
+
+@-webkit-keyframes buildings {
+  0% { background-position:0px 0px;}
+  100% { background-position:-1000px 0px;}
+}
+
 .game-over {
   -webkit-animation-name: arrest;
   -webkit-animation-iteration-count: infinite;
