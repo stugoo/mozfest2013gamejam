@@ -33,3 +33,16 @@
   0% { background-position:0px 0px;}
   100% { background-position:-30px 0px;}
 }
+
+.game-over {
+    -webkit-animation-name: arrest;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: .6s;
+
+}
+
+@-webkit-keyframes arrest{
+  0% { background-color: #00f;}
+  100% { background-color: #f00;}
+}
