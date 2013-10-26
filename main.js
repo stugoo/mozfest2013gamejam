@@ -15,6 +15,8 @@ function groaningStart(event){
     console.log("start?");
     groaning = true;
     $('.world').addClass('slow');
+
+    manageAudio(true); //true to play
   }
 }
 
@@ -25,6 +27,7 @@ function groaningEnd(event){
     groaning = false;
 
     $('.world').removeClass('slow');
+    manageAudio();
   }
 }
 
