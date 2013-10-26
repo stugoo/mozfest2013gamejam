@@ -1,20 +1,21 @@
 var copcar, copPos, speed, slowSpeed, fastSpeed, copCount;
 
 $(document).ready(function(){
-  
+
   slowSpeed = 5;
   fastSpeed = 10;
   copPos = -600;
   speed = "fast";
   copCount = 0;
 
-  window.webkitRequestAnimationFrame(step);  
+  window.webkitRequestAnimationFrame(step);
 
-  
+
 });
 
 function gameOverMan(){
   $(".game-over").show();
+  gameOverAudio();
 }
 
 function step(){
