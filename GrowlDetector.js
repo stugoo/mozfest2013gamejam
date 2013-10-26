@@ -20,6 +20,10 @@
             source = window.webkitURL.createObjectURL(stream);
             console.log(stream);
             window.a = stream;
+
+
+
+
         }, function (err) {
             throw err;
         });
