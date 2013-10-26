@@ -30,6 +30,12 @@ function gameOverAudio(){
 		audioEl = audioPlayer.get(0)
         audioEl.play();
 
+        setTimeout(function(){
+
+        	killaudio();
+
+        },5000)
+
 }
 
 
