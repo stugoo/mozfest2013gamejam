@@ -2,29 +2,29 @@ var carTimes = [2000, 8000],                             // Seconds at which the
     timeElapsed = 0,                                     // Total time
     groaning = false,                                    // Is the user groaning
     carOnScreen = false,                                 // Is there a car on screen
-    world = document.getElementsByClassName('world')[0]; // The world element
+    world = $('.world'); // The world element
 
 // Fake groaning with spacebar
 document.addEventListener("keydown", groaningStart);
 document.addEventListener("keyup", groaningEnd);
 
 function groaningStart(event){
-  event.preventDefault();
+  // event.preventDefault();
 
-  if (event.keyCode === 32){
+  if (groaning === false && event.keyCode === 32){
+    console.log("start?");
     groaning = true;
-
-    world.classList.add('slow');
+    $('.world').addClass('slow');
   }
 }
 
 function groaningEnd(event){
   event.preventDefault();
 
-  if (event.keyCode === 32){
+  if (groaning === true && event.keyCode === 32){
     groaning = false;
 
-    world.classList.remove('slow');
+    $('.world').removeClass('slow');
   }
 }
 
@@ -41,20 +41,14 @@ function policeCar(){
     return {
         add: function(){
           console.log('add');
-          this.el = document.createElement('div');
-          this.el.id = 'police';
-          this.el.classList.add('cop-car');
-
-          this.el.className = 'moving';
-          world.appendChild(this.el);
-
-          setTimeout(this.remove, secondsToMillis(2.3));
-
+          var copcar = $("<div class='cop-car'></div>");
+          this.el.className = 'cop-car';
+          $(".world").append(this.el);
+          setTimeout(this.remove, secondsToMillis(4));
           carOnScreen = true;
         },
 
         remove: function(){
-          console.log('remove');
           carOnScreen = false;
         }
     }

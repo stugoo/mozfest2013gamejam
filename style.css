@@ -13,6 +13,10 @@ body {
   overflow: hidden;
 }
 
+.world.slow {
+  border: solid 10px #555;
+}
+
 .sky {
   height: 200px;
   background: #8dcfea;

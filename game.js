@@ -1,18 +1,9 @@
 var copcar, copPos, speed, slowSpeed, fastSpeed;
 
 $(document).ready(function(){
-  $(".world").click(function(){
-    var cop = $(".cop-car");
-    cop.removeClass("cop-car-drive");
-    $("body").toggleClass("slow");
-    cop.addClass("cop-car-drive");
-    cop.offsetWidth = cop.offsetWidth;      
-  });
-  
   
   slowSpeed = 5;
   fastSpeed = 10;
-  copcar = $(".cop-car");
   copPos = 0;
   speed = "fast";
 
@@ -23,16 +14,26 @@ $(document).ready(function(){
 
 function step(){
 
-  if($("body").hasClass("slow")) {
-    copPos = copPos + slowSpeed;
-  } else {
-    copPos = copPos + fastSpeed;
-  }
+  var copcar = $(".cop-car");
 
+  if(copcar.length > 0) {
+
+    if($(".world").hasClass("slow")) {
+      copPos = copPos + slowSpeed;
+    } else {
+      copPos = copPos + fastSpeed;
+    }
+
+    copcar.css("right",copPos);
   
-  
-  copcar.css("right",copPos);
+    if(copPos > 1400 ){
+      copPos = -120;
+      copcar.remove();
+    }
+  }
 
   window.webkitRequestAnimationFrame(step);  
   
 }
+
+
