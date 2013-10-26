@@ -3,12 +3,14 @@ body {
 }
 
 .world {
+  border: solid 10px #222;
   width: 1000px;
   height: 500px;
   background: #DDD;
   margin: 0 auto;
   margin-top: 80px;
   position: relative;
+  overflow: hidden;
 }
 
 .sky {
@@ -33,6 +35,7 @@ body {
   position: absolute;
   width: 100%;
   top: 360px;
+  
 }
 
 .lane {
@@ -42,9 +45,6 @@ body {
   background: #777;
   width: 100%;
   background: url(lane.png) repeat-x;
-
-  
-  
 }
   
 .car {
@@ -60,7 +60,7 @@ body {
   width: 120px;
   height: 80px;
   bottom: 40px;
-  right: 20px;
+  right: -120px;
   position: absolute;
-  background: pink;
+  background: blue;
 }
