@@ -52,14 +52,15 @@ body {
 }
 
 .car {
-  width: 120px;
-  height: 80px;
-  top: -60px;
+  width: 150px;
+  height: 120px;
+  top: -55px;
   left: 250px;
   position: absolute;
   background: red;
   background: top left url(assets/images/bus.png) no-repeat;
   background-size: 100%;
+  z-index: 999999;
 }
 
 .cop-car {
@@ -69,10 +70,16 @@ body {
   right: -120px;
   position: absolute;
 
-  background: blue;
-  background: top left url(assets/images/bus.png) no-repeat;
-  background-size: 100%;
   z-index: 1000;
+}
+
+.cop-car .sprite {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: top left url(assets/images/cops.png) no-repeat;
+  background-size: 100%;
+  z-index: 100000000;
 }
 
 .cop-car .slow-zone {
@@ -88,7 +95,7 @@ body {
 
 .game-over{
   position: absolute;
-
+  display: none;
   width: 100%;
   height: 100%;
   background-color: #f00;

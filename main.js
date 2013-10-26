@@ -41,7 +41,7 @@ function policeCar(){
     return {
         add: function(){
           console.log('add');
-          var copcar = $("<div class='cop-car'><div class='slow-zone'></div></div>");
+          var copcar = $("<div class='cop-car'><div class='slow-zone'></div><div class='sprite'></div></div>");
           $(".world").append(copcar);
         },
     }
