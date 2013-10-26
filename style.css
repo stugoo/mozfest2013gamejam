@@ -79,7 +79,7 @@ body {
   height: 100%;
   background: top left url(assets/images/cops.png) no-repeat;
   background-size: 100%;
-  z-index: 100000000;
+  z-index: 99999;
 }
 
 .cop-car .slow-zone {
@@ -99,7 +99,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #f00;
-  opacity: 0.6;
+  opacity: 0.85;
 
   z-index: 100;
 
@@ -111,5 +111,6 @@ body {
   font-family: Arial;
 
   color: #f00;
+  z-index: 9999999;
 }
 
