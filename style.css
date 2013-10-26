@@ -4,13 +4,23 @@ body {
 
 .instructions{
   text-align: center;
-  font-family: arial;
-  font-size: 30px;
+  font-family: Helvetica, arial;
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 30px;
+  color: #1a508c;
+  position: relative;
+  top: -10px;
 }
 
-  .keys{
-    font-size: 15px;
-  }
+.instructions p {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.keys{
+  font-size: 15px;
+}
 
 .world {
   border: solid 10px #222;
@@ -137,15 +147,23 @@ body {
   opacity: 0.1;
 }
 
-.credits a{
-    text-decoration: none;
-    color: #fff;
+.credits {
+
+  text-align: center;
+
+}
+.credits a {
+  text-decoration: none;
+  font-family: Helvetica, Arial;
+  color: #fff;
+  opacity: .2;
 }
 
 .credits a:hover{
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.credits:hover{
-  opacity: 1;
+.credits:hover a{
+  opacity: .8;
+  color: white;
 }
