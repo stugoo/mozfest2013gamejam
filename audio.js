@@ -17,3 +17,13 @@ function manageAudio(play){
          audioEl.pause();
 
 }
+
+
+// Called every one second
+function gameOverAudio(){
+
+	var audioPlayer = $('#gameOverAudio');
+		audioEl = audioPlayer.get(0)
+        audioEl.play();
+
+}

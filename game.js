@@ -1,4 +1,4 @@
-var copcar, copPos, speed, slowSpeed, fastSpeed, totalDistance = 0, failed = false;
+var copcar, copPos, speed, slowSpeed, fastSpeed, totalDistance = 0, failed = false, copCount;
 
 $(document).ready(function(){
 
@@ -6,10 +6,9 @@ $(document).ready(function(){
   fastSpeed = 10;
   copPos = -600;
   speed = "fast";
+  copCount = 0;
 
   window.webkitRequestAnimationFrame(step);
-
-
 });
 
 function gameOverMan(finalTime){
@@ -20,6 +19,7 @@ function gameOverMan(finalTime){
   }
 
   $(".game-over").show();
+  gameOverAudio();
 }
 
 function step(){
@@ -40,32 +40,21 @@ function step(){
 
       var pos = parseInt($(this).css("right"));
       $(this).css("right",pos + speed);
-
-
-       if(pos > 300 && pos < 900) {
-
+      if(pos > 300 && pos < 900) {
          if(!$(".world").hasClass("slow")){
            gameOverMan(totalDistance);
          }
        }
-
-
-
        if(pos > 2000 ){
          $(this).remove();
+         copCount++;
+         console.log(copCount);
+         if(copCount == 10){
+           $(".game-over").remove();
+           $(".winner").show();
+         }
        }
-
     });
-
-
-
-
-
   }
 
-
   window.webkitRequestAnimationFrame(step);
-
-}
-
-
