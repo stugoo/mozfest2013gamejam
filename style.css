@@ -108,3 +108,20 @@ body {
   z-index: 9999999;
 }
 
+.winner {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  background-color: black;
+  opacity: 0.75;
+  z-index: 100;
+  text-align: center;
+  line-height: 500px;
+  font-size: 80px;
+  font-family: Arial;
+  color: white;
+  z-index: 9999999;
+}
+
