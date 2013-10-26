@@ -62,27 +62,33 @@ body {
 }
 
 .car {
-  width: 120px;
-  height: 80px;
-  top: -60px;
+  width: 150px;
+  height: 120px;
+  top: -55px;
   left: 250px;
   position: absolute;
   background: red;
   background: top left url(assets/images/bus.png) no-repeat;
   background-size: 100%;
+  z-index: 999999;
 }
 
 .cop-car {
   width: 120px;
   height: 80px;
   bottom: 40px;
-  right: -120px;
+  right: -600px;
   position: absolute;
-
-  background: blue;
-  background: top left url(assets/images/bus.png) no-repeat;
-  background-size: 100%;
   z-index: 1000;
+}
+
+.cop-car .sprite {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: top left url(assets/images/cops.png) no-repeat;
+  background-size: 100%;
+  z-index: 99999;
 }
 
 .cop-car .slow-zone {
@@ -90,35 +96,31 @@ body {
   width: 500px;
   top: -20px;
   height: 80px;
-  opacity: .5;
   left: -200px;
-  background: #7caee6;
+  background: -webkit-linear-gradient(left, rgba(124,174,230,0) 0% , rgba(124,174,230,.4) 20% ,  rgba(124,174,230,.4)  80%,  rgba(124,174,230,0) 100% );
   z-index: 500;
 }
 
 .game-over{
   position: absolute;
-
+  display: none;
   width: 100%;
   height: 100%;
+  font-weight: bold;
   background-color: #f00;
-  opacity: 0.6;
-
+  opacity: 0.75;
   z-index: 100;
-
   text-align: center;
   line-height: 500px;
-
   font-size: 80px;
-
   font-family: Arial;
-
-  color: #f00;
+  color: white;
+  z-index: 9999999;
 }
 
 .credits{
   text-align: center;
-  opacity: 0.2;
+  opacity: 0.1;
 }
 
 .credits a{

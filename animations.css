@@ -3,7 +3,6 @@
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: .5s;
-
 }
 
 @-webkit-keyframes car {
@@ -35,16 +34,16 @@
 }
 
 .game-over {
-    -webkit-animation-name: arrest;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-duration: .6s;
-
+  -webkit-animation-name: arrest;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-duration: .6s;
 }
 
 @-webkit-keyframes arrest{
   0% { background-color: #00f;}
-  100% { background-color: #f00;}
+  50% { background-color: #f00;}
+  100% { background-color: #00f;}
 }
 
 .instructions {
