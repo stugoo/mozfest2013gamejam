@@ -111,11 +111,15 @@ body {
   opacity: 0.75;
   z-index: 100;
   text-align: center;
-  line-height: 500px;
+  line-height: 200px;
   font-size: 80px;
   font-family: Arial;
   color: white;
   z-index: 9999999;
+}
+
+.score{
+  font-size: 40px;
 }
 
 .credits{
@@ -135,4 +139,3 @@ body {
 .credits:hover{
   opacity: 1;
 }
-
