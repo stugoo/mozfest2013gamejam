@@ -1,7 +1,11 @@
 var tracks = [
 	'assets/audio/groan1.m4a',
-	'assets/audio/groan2.m4a'
+	'assets/audio/groan2.m4a',
+	'assets/audio/groan3.m4a',
+	'assets/audio/groan4.m4a'
 ]
+
+
 
 // Called every one second
 function manageAudio(play){
@@ -26,4 +30,9 @@ function gameOverAudio(){
 		audioEl = audioPlayer.get(0)
         audioEl.play();
 
+}
+
+
+function killaudio (){
+	$('audio').remove();
 }
