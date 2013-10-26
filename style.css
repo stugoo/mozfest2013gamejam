@@ -2,6 +2,16 @@ body {
   background: black;
 }
 
+.instructions{
+  text-align: center;
+  font-family: arial;
+  font-size: 30px;
+}
+
+  .keys{
+    font-size: 15px;
+  }
+
 .world {
   border: solid 10px #222;
   width: 1000px;
@@ -104,5 +114,23 @@ body {
   font-family: Arial;
 
   color: #f00;
+}
+
+.credits{
+  text-align: center;
+  opacity: 0.2;
+}
+
+.credits a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.credits a:hover{
+    text-decoration: underline;
+}
+
+.credits:hover{
+  opacity: 1;
 }
 

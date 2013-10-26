@@ -46,3 +46,17 @@
   0% { background-color: #00f;}
   100% { background-color: #f00;}
 }
+
+.instructions {
+    -webkit-animation-name: instructions;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 4s;
+    opacity: 0;
+  }
+
+@-webkit-keyframes instructions{
+  0% { opacity: 0;}
+  10% { opacity: 1;}
+  100% { opacity: 0;}
+}
