@@ -1,4 +1,4 @@
-var carTimes = [2000, 8000],                             // Seconds at which the cars appear
+var carTimes = [1000, 5000, 9000, 13000],                 // Seconds at which the cars appear
     timeElapsed = 0,                                     // Total time
     groaning = false,                                    // Is the user groaning
     carOnScreen = false,                                 // Is there a car on screen
@@ -41,16 +41,9 @@ function policeCar(){
     return {
         add: function(){
           console.log('add');
-          var copcar = $("<div class='cop-car'></div>");
-          this.el.className = 'cop-car';
-          $(".world").append(this.el);
-          setTimeout(this.remove, secondsToMillis(4));
-          carOnScreen = true;
+          var copcar = $("<div class='cop-car'><div class='slow-zone'></div></div>");
+          $(".world").append(copcar);
         },
-
-        remove: function(){
-          carOnScreen = false;
-        }
     }
 };
 
@@ -63,15 +56,6 @@ function tick(){
         car.add();
     }
 
-  if (carOnScreen === true){
-    if (groaning === true){
-      // Success
-      console.log('groaning');
-    } else {
-      // Failure
-      console.log('should be groaning');
-    }
-  }
 }
 
 // First tick

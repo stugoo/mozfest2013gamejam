@@ -60,7 +60,6 @@ body {
   background: red;
   background: top left url(assets/images/bus.png) no-repeat;
   background-size: 100%;
-
 }
 
 .cop-car {
@@ -69,10 +68,22 @@ body {
   bottom: 40px;
   right: -120px;
   position: absolute;
-  background: blue;
 
+  background: blue;
   background: top left url(assets/images/bus.png) no-repeat;
   background-size: 100%;
+  z-index: 1000;
+}
+
+.cop-car .slow-zone {
+  position: absolute;
+  width: 500px;
+  top: -20px;
+  height: 80px;
+  opacity: .5;
+  left: -200px;
+  background: #7caee6;
+  z-index: 500;
 }
 
 .game-over{
