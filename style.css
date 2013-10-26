@@ -1,5 +1,6 @@
 body {
   background: black;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 .instructions{
@@ -170,14 +171,38 @@ body {
 
 .credits {
   text-align: center;
+  color: #fff;
 
 }
+
 .credits a {
   text-decoration: none;
   font-family: Helvetica, Arial;
   color: #fff;
   opacity: .2;
 }
+
+.credits ul {
+  margin: 0 0 10px ;
+  padding:0;
+  display: block;
+}
+
+.credits li {
+  margin: 0;
+  padding:0;
+  display: inline;
+}
+
+.credits li:before {
+  content: ", ";
+  display: inline;
+}
+
+.credits li:first-child:before {
+  display: none;
+}
+
 
 .credits a:hover{
   text-decoration: underline;

@@ -13,7 +13,8 @@ $(document).ready(function(){
 
 function gameOverMan(finalTime){
   if (failed === false){
-      $(".game-over").append('<p class="score">You travellend '+parseInt(finalTime)+' metres</p>');
+      // TODO: i18n
+      $(".game-over").append('<p class="score">You travelled '+parseInt(finalTime)+' metres</p>');
 
       failed = true;
   }
@@ -58,3 +59,4 @@ function step(){
   }
 
   window.webkitRequestAnimationFrame(step);
+}
