@@ -4,14 +4,14 @@ var tracks = [
 ]
 
 // Called every one second
-function playAudio(){
+function manageAudio(play){
 
 	var track = tracks.sort(function() {return 0.5 - Math.random()})[1],
 		audioPlayer = $('#audioPlayer');
-		audioEl =  audioPlayer.get(0)
+		audioEl = audioPlayer.get(0)
 		audioPlayer.attr('src', track);
 
-       if (audioEl.paused)
+       if (play)
          audioEl.play();
        else
          audioEl.pause();
