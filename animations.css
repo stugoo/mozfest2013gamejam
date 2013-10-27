@@ -3,6 +3,11 @@
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: .5s;
+
+  -moz-animation-name: car;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: .5s;
 }
 
 @-webkit-keyframes car {
@@ -11,8 +16,18 @@
   100% { -webkit-transform: translateX(0px); }
 }
 
+@-moz-keyframes car {
+  0% { -webkit-transform: translateX(0px); }
+  50% { -webkit-transform: translateY(4px) translateX(0px); }
+  100% { -webkit-transform: translateX(0px); }
+}
 
 @-webkit-keyframes copcar {
+  0% { -webkit-transform: translateX(0px); }
+  100% { -webkit-transform: translateX(-1400px); }
+}
+
+@-moz-keyframes copcar {
   0% { -webkit-transform: translateX(0px); }
   100% { -webkit-transform: translateX(-1400px); }
 }
@@ -22,10 +37,16 @@
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: .05s;
+
+  -moz-animation-name: lane;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: .05s;
 }
 
 .slow .lane {
   -webkit-animation-duration: .1s;
+  -moz-animation-duration: .1s;
 }
 
 @-webkit-keyframes lane {
@@ -33,14 +54,31 @@
   100% { background-position:-30px 0px;}
 }
 
+@-moz-keyframes lane {
+  0% { background-position:0px 0px;}
+  100% { background-position:-30px 0px;}
+}
+
+
 .buildings {
   -webkit-animation-name: buildings;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-duration: 5s;
+
+  -moz-animation-name: buildings;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 5s;
+
 }
 
 @-webkit-keyframes buildings {
+  0% { background-position:0px 0px;}
+  100% { background-position:-1000px 0px;}
+}
+
+@-moz-keyframes buildings {
   0% { background-position:0px 0px;}
   100% { background-position:-1000px 0px;}
 }
@@ -50,9 +88,20 @@
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-timing-function: linear;
   -webkit-animation-duration: .6s;
+
+  -moz-animation-name: arrest;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -moz-animation-duration: .6s;
 }
 
 @-webkit-keyframes arrest{
+  0% { background-color: #00f;}
+  50% { background-color: #f00;}
+  100% { background-color: #00f;}
+}
+
+@-moz-keyframes arrest{
   0% { background-color: #00f;}
   50% { background-color: #f00;}
   100% { background-color: #00f;}
@@ -63,10 +112,23 @@
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: linear;
     -webkit-animation-duration: 4s;
+
+
+    -moz-animation-name: instructions;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: linear;
+    -moz-animation-duration: 4s;
     opacity: 0;
   }
 
 @-webkit-keyframes instructions{
+  0% { opacity: 0;}
+  10% { opacity: 1;}
+  100% { opacity: 0;}
+}
+
+
+@-moz-keyframes instructions{
   0% { opacity: 0;}
   10% { opacity: 1;}
   100% { opacity: 0;}

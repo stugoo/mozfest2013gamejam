@@ -34,7 +34,7 @@ function gameOverAudio(){
 
         	killaudio();
 
-        },5000)
+        },4000)
 
 }
 

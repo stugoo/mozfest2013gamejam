@@ -1,3 +1,21 @@
+if ( !window.requestAnimationFrame ) {
+
+  window.requestAnimationFrame = ( function() {
+
+    return window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
+
+      window.setTimeout( callback, 1000 / 60 );
+
+    };
+
+  } )();
+
+}
+
 var copcar, copPos, speed, slowSpeed, fastSpeed, totalDistance = 0, failed = false, copCount;
 
 $(document).ready(function(){
@@ -8,7 +26,7 @@ $(document).ready(function(){
   speed = "fast";
   copCount = 0;
 
-  window.webkitRequestAnimationFrame(step);
+  window.requestAnimationFrame(step);
 });
 
 function gameOverMan(finalTime){
@@ -58,5 +76,5 @@ function step(){
     });
   }
 
-  window.webkitRequestAnimationFrame(step);
+  window.requestAnimationFrame(step);
 }
